@@ -672,14 +672,15 @@ footer p {
     margin-top: 10%;
   }
   .parentContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     margin-top: 10%;
   }
 }
 
 @media (max-width: 480px) {
+  .parentContainer {
+    display: none;
+  }
   .parentContainer .formContainer {
     width: 100%;
   }

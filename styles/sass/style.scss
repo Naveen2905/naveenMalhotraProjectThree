@@ -302,13 +302,14 @@ footer {
     margin-top: 10%;
   }
   .parentContainer {
-    display: flex;
+    display: none;
     margin-top: 10%;
   }
 }
 
 @media (max-width: 480px) {
   .parentContainer {
+    display: none;
     .formContainer {
       width: 100%;
     }

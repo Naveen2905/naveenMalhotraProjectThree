@@ -1,0 +1,319 @@
+@import "./setup";
+@import "./header";
+@import "./default";
+
+//* Main Styling Starts
+body {
+  background: #202020;
+}
+
+main {
+  height: 80vh;
+}
+
+.addNewNote {
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .create {
+    color: #5bc0be;
+    border: none;
+    font-size: 3rem;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Finger Paint", cursive;
+    transition: all 0.5s ease-in;
+    &:hover {
+      border-top: 1px solid #f06543;
+      border-bottom: 1px solid #f06543;
+      text-shadow: 1px 1px 10px #5bc0be;
+    }
+  }
+}
+
+.parentContainer {
+  display: none;
+  // display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .formContainer {
+    width: calc(100% / 2);
+    padding: 2% 0;
+    form.textNoteForm {
+      .noteHeading {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 6px 12px;
+        line-height: 1.4;
+        color: #9da7ad;
+        border-radius: 4px;
+        background: transparent;
+        border: 1px solid #5bc0be;
+        font-size: 2.4rem;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+      }
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        line-height: 1.4;
+        color: #a6b1b9;
+        border-radius: 4px;
+        background: transparent;
+        border: 1px solid #5bc0be;
+        font-size: 1.6rem;
+        font-family: "Dosis", sans-serif;
+        resize: none;
+      }
+      button {
+        padding: 5px;
+        color: #5bc0be;
+        background: transparent;
+        border: none;
+        box-shadow: 2px 0 5px #c2b8b2;
+        margin: 2% 0;
+        font-size: 1.6rem;
+        text-transform: capitalize;
+        transition: all 0.2s ease-in;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 5px 0 8px #5bc0be;
+          border-right: 2px solid #f06543;
+          border-bottom: 2px solid #f06543;
+        }
+      }
+    }
+  }
+
+  .textNoteContainer {
+    .generalNote {
+      border: 1px solid #c2b8b2;
+      height: auto;
+      margin: 2%;
+      box-shadow: 2px 2px 10px #5bc0be;
+      h2 {
+        text-align: center;
+        font-size: 2.6rem;
+        line-height: 1.4;
+        color: #a6b1b9;
+        border: 1px solid #5bc0be;
+        border-bottom-right-radius: 20%;
+        font-family: "Playfair Display", serif;
+        font-weight: bold;
+        padding: 10px;
+      }
+      p {
+        line-height: 1.4;
+        color: #a6b1b9;
+        border-radius: 4px;
+        background: transparent;
+        font-size: 1.6rem;
+        font-family: "Dosis", sans-serif;
+        padding: 10px;
+      }
+    }
+  }
+
+  .todoHeading {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 6px 12px;
+    line-height: 1.4;
+    color: #a6b1b9;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid #5bc0be;
+    font-size: 2.4rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+  }
+  .todoList {
+    display: block;
+    width: 100%;
+    padding: 6px 12px;
+    line-height: 1.4;
+    color: #a6b1b9;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid #5bc0be;
+    font-size: 1.6rem;
+    font-family: "Dosis", sans-serif;
+  }
+}
+.todoContainer {
+  width: calc(100% / 2);
+  padding: 2% 0;
+  .toDo {
+    button {
+      padding: 5px;
+      color: #5bc0be;
+      background: transparent;
+      border: none;
+      box-shadow: 2px 0 5px #c2b8b2;
+      margin: 2% 0;
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      transition: all 0.2s ease-in;
+      border-radius: 10px;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 5px 0 8px #5bc0be;
+        border-right: 2px solid #f06543;
+        border-bottom: 2px solid #f06543;
+      }
+    }
+  }
+  .toDoTitle {
+    padding: 6px 12px;
+    line-height: 1.4;
+    color: #a6b1b9;
+    border-radius: 4px;
+    background: transparent;
+    font-size: 2.6rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+  }
+  .toDoHead {
+    height: auto;
+    margin: 2%;
+    box-shadow: 2px 5px 20px #5bc0be;
+    li {
+      color: #a6b1b9;
+      border-radius: 4px;
+      background: transparent;
+      border-bottom: 1px solid #5bc0be;
+      font-size: 2rem;
+      font-family: "Dosis", sans-serif;
+      padding: 6px 12px;
+      border-bottom-right-radius: 20%;
+      cursor: pointer;
+    }
+    .text-muted {
+      color: #f06543;
+      text-decoration-line: line-through;
+    }
+  }
+}
+
+.reminderForm {
+  input {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 6px 12px;
+    line-height: 1.4;
+    color: #9da7ad;
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid #5bc0be;
+    font-size: 2.4rem;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    -moz-appearance: textfield;
+    &-webkit-inner-spin-button,
+    &-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+  button {
+    padding: 5px;
+    color: #5bc0be;
+    background: transparent;
+    border: none;
+    box-shadow: 2px 0 5px #c2b8b2;
+    margin: 2% 0;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    transition: all 0.2s ease-in;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 5px 0 8px #5bc0be;
+      border-right: 2px solid #f06543;
+      border-bottom: 2px solid #f06543;
+    }
+  }
+}
+.reminderNote {
+  height: auto;
+  box-shadow: 2px 2px 10px #5bc0be;
+  h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    line-height: 1.4;
+    color: #a6b1b9;
+    border: 1px solid #5bc0be;
+    border-bottom-right-radius: 20%;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    padding: 10px;
+  }
+}
+
+//Animation for reminder Box
+.vibrate {
+  animation: vibrate 0.5s ease-in-out infinite both;
+}
+
+@keyframes vibrate {
+  0% {
+            transform: translate(0);
+  }
+  20% {
+            transform: translate(-2px, 2px);
+  }
+  40% {
+            transform: translate(-2px, -2px);
+  }
+  60% {
+            transform: translate(2px, 2px);
+  }
+  80% {
+            transform: translate(2px, -2px);
+  }
+  100% {
+            transform: translate(0);
+  }
+}
+
+
+footer {
+  height: 10vh;
+  p {
+    font-family: "Finger Paint", cursive;
+    color: #edf7fc;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+
+// Media Queries for Tablets and Mobile Phones
+@media (max-width: 768px) {
+  .addNewNote {
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10%;
+  }
+  .parentContainer {
+    display: flex;
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .parentContainer {
+    .formContainer {
+      width: 100%;
+    }
+    .todoContainer {
+      width: 100%;
+    }
+  }
+}

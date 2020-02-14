@@ -1,0 +1,20 @@
+header {
+  background: #37505c;
+  height: 10vh;
+  .headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    a {
+      h1 {
+        font-family: "Finger Paint", cursive;
+        color: #edf7fc;
+        text-align: center;
+        display: inline-block;
+      
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c9df64d7f4.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Finger+Paint&display=swap" rel="stylesheet">
+    <!-- AniCollection.css library -->
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+    <link rel="stylesheet" href="./styles/social_icons.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>JotDown App</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="wrapper headerContainer">
+            <a href="./index.html">
+                <h1>JotDown App</h1>
+            </a>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="wrapper">
+
+            <div class="addNewNote">
+                <a href="#" class="create stickyNote" data-anijs="if: click, do: bounceInLeft animated"><i
+                        class="fas fa-sticky-note"></i> Text Note</a>
+
+                <a href="#" class="create listing" data-anijs="if: click, do: bounceInDown animated"><i
+                        class="fas fa-list-ul"></i> To-Do List</a>
+
+                <a href="#" class="create reminder" data-anijs="if: click, do: bounceInRight animated"><i
+                        class="fas fa-stopwatch"></i> Reminder</a>
+
+            </div>
+            <div class="parentContainer">
+                <div class="formContainer">
+                    <!-- Create a text Note to enter details STARTS..-->
+                    <form class="textNoteForm">
+                        <input type="text" class="noteHeading" placeholder="Note Title...">
+                        <textarea placeholder="Add a note..."></textarea>
+                        <button type="submit">post it! <i class="far fa-sticky-note"></i></button>
+                    </form>
+
+                    <div class="textNoteContainer">
+                        <!-- Text Note Out will generate in this Div  -->
+                        <!-- <div>
+                    </div> -->
+                    </div>
+                    <!-- Create a text Note to enter details  ENDS..-->
+                </div>
+                <div class="todoContainer">
+                    <form class="toDo">
+                        <input type="text" class="todoHeading" placeholder="To-Do Title...">
+                        <input type="text" class="todoList" placeholder="List you items...">
+
+                        <button type="submit">post it! <i class="far fa-sticky-note"></i></button>
+                    </form>
+
+                    <div class="toDoTitle"></div>
+                    <ul class="toDoHead">
+
+                    </ul>
+                </div>
+
+                <div class="reminderContainer">
+                    <form class="reminderForm">
+                        <input type="number" id="time" name="time" placeholder="Seconds" />
+                        <input type="text" placeholder="Note" class="reminderNote">
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div class="reminderNote"></div>
+                    <audio id="clip">
+                        <source src="./assets/Best Natural Ringtone alarm tone.mp3">
+                        </source>
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <ul class="socialIcons bottom">
+            <li><a href="https://github.com/Naveen2905"><i class="fab fa-github"></i></a>
+            </li>
+            <li><a href="https://www.linkedin.com/in/naveenmalhotra2905/"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li><a href="https://twitter.com/naveencodes"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <p>JotDown App &copy; Naveen Malhotra</p>
+    </footer>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="./scripts/anijs.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

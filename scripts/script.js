@@ -93,21 +93,21 @@ $(function () {
 
     $('.reminderForm').on('submit', function (e) {
         e.preventDefault();
-        let seconds = parseInt($('#time').val());
+        let minutes = parseInt($('#time').val());
         let reminderMessage = $('input.reminderNote').val();
         
-        let interval = setInterval(function () {
+        let interval = setTimeout(function () {
 
-            seconds--;
+            minutes--;
 
-            if (seconds === 0) {
+            if (minutes === 0) {
                 clearInterval(interval);
                 $('#clip').trigger('play')
                 const reminder = `<h2>${reminderMessage}</h2>`;
                 $('div.reminderNote').html(reminder).addClass('vibrate');
 
             }
-        }, 1000);
+        },60 * 1000);
     });
     //* Reminder Ends Here-------------------
 
